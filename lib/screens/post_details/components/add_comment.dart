@@ -63,7 +63,7 @@ class AddCommentButton extends StatelessWidget {
                         decoration: InputDecoration(
                           labelText: 'Your Comment',
                         ),
-                        controller: nameInputController,
+                        controller: commentInputController,
                       ),
                     ),
                   ],
