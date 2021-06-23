@@ -77,15 +77,10 @@ class _BodyState extends State<Body> {
                     );
                   });
             }
-            /* return Center(
+             return Center(
               child: CircularProgressIndicator(),
-            );*/
-            return Center(
-              child: Text(
-                'Huy tam plaval',
-                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
-              ),
             );
+
           }),
     );
   }
