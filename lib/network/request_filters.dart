@@ -18,6 +18,10 @@ class Filters {
         prefs.getString('allAlbums') != null &&
         prefs.getString('allPhotos') != null) {
 
+      allComments = Comment.decode(prefs.getString('allComments'));
+      allPosts = Post.decode(prefs.getString('allPosts'));
+      allPhotos = Photo.decode(prefs.getString('allPhotos'));
+      allAlbums = Album.decode(prefs.getString('allAlbums'));
 
     } else {
       await Network('https://jsonplaceholder.typicode.com/comments')
@@ -48,7 +52,6 @@ class Filters {
         final String encodedPhotos = Photo.encode(photosFromApi);
         prefs.setString('allPhotos', encodedPhotos);
       });
-
 
       allComments = Comment.decode(prefs.getString('allComments'));
       allPosts = Post.decode(prefs.getString('allPosts'));

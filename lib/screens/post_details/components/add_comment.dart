@@ -82,14 +82,23 @@ class AddCommentButton extends StatelessWidget {
                           emailInputController.text.isNotEmpty &&
                           commentInputController.text.isNotEmpty) {
                         Network(
-                            'https://jsonplaceholder.typicode.com/comments')
-                            .createPost(Comment(
+                            'https://jsonplaceholder.typicode.com/comments').createPost(Comment(
                           id: Random().nextInt(100),
                           postId: tappedPost.id,
                           name: nameInputController.text,
                           email: emailInputController.text,
                           body: commentInputController.text,
                         ));
+                        /*tappedPost.comments.add(
+                            {
+                              'postId': tappedPost.postId,
+                              'id': Random().nextInt(100),
+                              'body': commentInputController.text,
+                              'name': nameInputController.text,
+                              'email': emailInputController.text,
+                            });*/
+
+                        Navigator.pop(context);
                       }
                     },
                     child: Text('Send'),
