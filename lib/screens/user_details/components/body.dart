@@ -27,9 +27,8 @@ class Body extends StatelessWidget {
           Container(
             height: SizeConfig.screenHeight * 0.3,
             width: SizeConfig.screenWidth,
-            child: Image.network(
-              /*---- FIRST PHOTO OF ALBUM ----*/
-              '${tappedUser.albums[0].photos[0].url}',
+            child:  Image.network(
+              '${tappedUser.albums[0].photos[0]['url']}',
               fit: BoxFit.fill,
             ),
             decoration: BoxDecoration(

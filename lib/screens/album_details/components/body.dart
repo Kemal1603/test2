@@ -25,13 +25,13 @@ class Body extends StatelessWidget {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                     fit: BoxFit.fill,
-                    image: NetworkImage('${tappedAlbum.photos[i].url}'),
+                    image: NetworkImage('${tappedAlbum.photos[i]['url']}'),
                   ),
                 ),
                 width: SizeConfig.screenWidth,
                 margin: EdgeInsets.symmetric(horizontal: 5.0),
                 child: Text(
-                  '${tappedAlbum.photos[i].title}',
+                  '${tappedAlbum.photos[i]['title']}',
                   style: TextStyle(fontSize: 20.0, color: Colors.white),
                 ),
               );

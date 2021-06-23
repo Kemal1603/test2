@@ -85,7 +85,7 @@ class AddCommentButton extends StatelessWidget {
                             'https://jsonplaceholder.typicode.com/comments')
                             .createPost(Comment(
                           id: Random().nextInt(100),
-                          postId: tappedPost.postId,
+                          postId: tappedPost.id,
                           name: nameInputController.text,
                           email: emailInputController.text,
                           body: commentInputController.text,

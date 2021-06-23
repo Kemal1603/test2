@@ -63,8 +63,7 @@ class Body extends StatelessWidget {
                                                 fontWeight: FontWeight
                                                     .normal),
                                             text:
-                                            '${tappedPost.comments[index]
-                                                .name}\n',
+                                            '${tappedPost.comments[index]['name']}\n',
                                             children: [
                                               TextSpan(
                                                   text: 'Email: ',
@@ -74,9 +73,7 @@ class Body extends StatelessWidget {
                                                   children: [
                                                     TextSpan(
                                                       text:
-                                                      '${tappedPost
-                                                          .comments[index]
-                                                          .email}\n',
+                                                      '${tappedPost.comments[index]['email']}\n',
                                                       style: TextStyle(
                                                         fontWeight:
                                                         FontWeight.normal,
@@ -84,8 +81,8 @@ class Body extends StatelessWidget {
                                                             .lightBlue,
                                                       ),
                                                     ),
-                                                  ])
-                                            ])
+                                                  ]),
+                                            ]),
                                       ],
                                     ),
                                   ),
@@ -94,7 +91,7 @@ class Body extends StatelessWidget {
                                     style: TextStyle(
                                         fontWeight: FontWeight.bold),
                                   ),
-                                  Text('${tappedPost.comments[index].body}\n')
+                                  Text('${tappedPost.comments[index]['body']}\n')
                                 ],
                               ),
                             ),

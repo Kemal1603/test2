@@ -23,7 +23,7 @@ class AlbumDetails extends StatelessWidget {
           padding: EdgeInsets.only(
               left: SizeConfig.screenWidth * 0.5,
               top: SizeConfig.screenHeight * 0.01),
-          child: Text('Album № ${tappedAlbum.albumId}'),
+          child: Text('Album № ${tappedAlbum.id}'),
         ),
       ),
       body: Body(tappedAlbum: tappedAlbum),

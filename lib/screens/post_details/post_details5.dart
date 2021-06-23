@@ -42,7 +42,7 @@ class _PostDetailsState extends State<PostDetails> {
           padding: EdgeInsets.only(
               left: SizeConfig.screenWidth * 0.5,
               top: SizeConfig.screenHeight * 0.01),
-          child: Text('Post № ${tappedPost.postId}'),
+          child: Text('Post № ${tappedPost.id}'),
         ),
       ),
       body: Body(tappedPost: tappedPost),

@@ -16,6 +16,7 @@ class UserAlbumsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
     return GestureDetector(
       onTap: (){
         Navigator.pushNamed(context, AlbumDetails.routeName,
@@ -64,7 +65,7 @@ class UserAlbumsWidget extends StatelessWidget {
                     width: SizeConfig.screenWidth * 0.8,
                     height: SizeConfig.screenHeight * 0.18,
                     child: Image.network(
-                      '${tappedUser.albums[index].photos[0].url}',
+                      '${tappedUser.albums[0].photos[index]['url']}',
                       fit: BoxFit.fill,),
                   ),
                 )

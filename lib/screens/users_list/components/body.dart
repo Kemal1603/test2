@@ -5,8 +5,6 @@ import 'package:test_app/network/api_call.dart';
 import 'package:test_app/network/request_filters.dart';
 import 'package:test_app/screens/user_details/details_screen2.dart';
 
-
-
 //------------------------ CLASS DECLARATION -------------------------//
 class Body extends StatefulWidget {
   @override
@@ -14,8 +12,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-
-
   @override
   void initState() {
     /*--- CALL ASYNC FUNCTION TO TO START DOWNLOAD DATA  ONCE PAGE LOADED---*/
@@ -51,9 +47,9 @@ class _BodyState extends State<Body> {
                                 website: snapshot.data[index]['website'],
                                 company: snapshot.data[index]['company'],
                                 posts: Filters.filteredPosts(
-                                    snapshot, snapshot.data[index]['id']),
+                                    snapshot.data[index]['id']),
                                 albums: Filters.filteredAlbums(
-                                    snapshot, snapshot.data[index]['id'])),
+                                     snapshot.data[index]['id'])),
                           );
                         },
                         child: Card(
@@ -81,8 +77,14 @@ class _BodyState extends State<Body> {
                     );
                   });
             }
-            return Center(
+            /* return Center(
               child: CircularProgressIndicator(),
+            );*/
+            return Center(
+              child: Text(
+                'Huy tam plaval',
+                style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
+              ),
             );
           }),
     );
